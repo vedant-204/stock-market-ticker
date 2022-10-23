@@ -98,3 +98,6 @@ async def get_statistics() -> dict:
     return {"stats": {"avg":avg, "std":std}}
 
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=3000, workers = 1)
